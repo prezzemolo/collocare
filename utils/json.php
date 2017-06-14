@@ -8,7 +8,7 @@ function rfc7807 ($code, array $element = []) {
         'type' => $element['type'] ?? 'about:blank',
         'title' => $element['title'] ?? 'Internal server error.',
         'detail' => $element['detail'] ?? 'any reason, some error occurred in script.'
-    ]);
+    ], JSON_PRETTY_PRINT);
     die();
 }
 ?>
