@@ -2,7 +2,7 @@
 namespace collocare;
 
 require_once './utils/json.php';
-use function utils\rfc7807 as stopper;
+use function \collocare\utils\rfc7807 as stopper;
 
 // raise 404
 stopper(404, [
