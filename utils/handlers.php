@@ -2,11 +2,11 @@
 namespace collocare\utils\handlers;
 
 /* load jsonify utilities */
-require_once './jsonify.php';
+require_once __DIR__.'/jsonify.php';
 use function \collocare\utils\jsonify\error as stopper;
 
 /* error handler for global error */
-function error_handler (int $errno, string $errstr, string $errorfile, int $errline): boolean {
+function error_handler (int $errno, string $errstr, string $errorfile, int $errline): bool {
     /* check bit with current errorlevel. if not in it,pass */
     if (!(error_reporting() & $error)) {
         return FALSE;
