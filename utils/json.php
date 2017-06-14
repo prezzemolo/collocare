@@ -1,5 +1,5 @@
 <?php
-namespace \collocare\utils;
+namespace collocare\utils;
 
 function rfc7807 (number $code, array $element = []) {
     http_response_code($code);
