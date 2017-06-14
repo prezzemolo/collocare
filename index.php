@@ -1,8 +1,14 @@
 <?php
 namespace collocare;
 
-require_once './utils/json.php';
-use function \collocare\utils\rfc7807 as stopper;
+/* load utilities */
+require_once './utils/jsonify.php';
+require_once './utils/handlers.php';
+use function \collocare\utils\jsonify\error as stopper;
+use function \collocare\utils\handlers\error_handlers;
+
+// registry handler
+set_error_handler($error_handlers);
 
 // raise 404
 stopper(404, [

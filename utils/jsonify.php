@@ -1,7 +1,8 @@
 <?php
-namespace collocare\utils;
+namespace collocare\utils\jsonify;
 
-function rfc7807 (int $code, array $element = []) {
+/* RFC7807 error JSON echoer */
+function error (int $code, array $element = []) {
     http_response_code($code);
     header('Content-Type', 'application/problem+json');
     echo json_encode([
