@@ -1,7 +1,7 @@
 <?php
 namespace collocare\utils;
 
-function rfc7807 ($code, array $element = []) {
+function rfc7807 (int $code, array $element = []) {
     http_response_code($code);
     header('Content-Type', 'application/problem+json');
     echo json_encode([
