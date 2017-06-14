@@ -2,7 +2,7 @@
 namespace collocare\utils\handlers;
 
 /* load jsonify utilities */
-require_once './json.php';
+require_once './jsonify.php';
 use function \collocare\utils\jsonify\error as stopper;
 
 /* error handler for global error */
