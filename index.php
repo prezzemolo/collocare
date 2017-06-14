@@ -11,7 +11,7 @@ use function \collocare\utils\helpers\FriendlyErrorType;
 set_error_handler(
     function (int $errno, string $errstr, string $errorfile, int $errline): bool {
         /* check bit with current errorlevel. if not in it,pass */
-        if (!(error_reporting() & $error)) {
+        if (!(error_reporting() & $errno)) {
             return FALSE;
         }
 
